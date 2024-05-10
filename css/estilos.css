@@ -1,6 +1,6 @@
 header {
-  padding: 20px;
-  display: flexbox;
+  padding: 40px;
+  display: inline;
   text-align: center;
   margin: top 170px;
   font: size 10px;
@@ -10,17 +10,22 @@ header {
 }
 
 h1 {
-  text-align: center;
+  text-align:center;
   color: white;
 }
 
 h2 {
   text-align: center;
+  background-color: #000;
+  width: 100%;
+  
 }
 
 h3 {
   text-align: center;
   color: white;
+  background-color: #000;
+  width: 100%;
 }
 
 div {
@@ -30,22 +35,28 @@ div {
 
 header nav ul {
   list-style-type: none;
-  margin: 0;
+  margin: 100px;
   padding: 10px;
+  display: flexbox;
+  text-align: center;
 }
 header nav ul li {
   text-decoration: none;
-  display: inline;
+  display: flex;
+  text-align: center;
   margin-right: 20px;
 }
 header nav ul li a {
-  text-decoration: none;
+  text-decoration:none;
   color: white;
+  background-color: #000;
+  width: 100%;
+  height: 2px;
+  padding: 6px;
 }
 header nav ul li a:hover {
   color: white;
 }
-
 section {
   background-color: rgb(47, 138, 108);
   background-image: url(fondo\ verde.avif);
@@ -102,6 +113,7 @@ td.enmarcado {
   border: 2px solid red;
 }
 
+
 body {
   background-color: rgb(47, 138, 108);
 }
@@ -133,11 +145,17 @@ body {
   color: white;
 }
 
-.tabletable-striped {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 20px;
+.full-page-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.full-page-table td {
+  width: 33.33%; 
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #000;
 }
 
 .container {
@@ -159,8 +177,173 @@ body {
 }
 
 .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 10px; /* Reducir el relleno */
+    display: flex; /* No es 'flexbox', es 'flex' */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    margin-top: 20px; /* Reducir el margen superior */
+    font: size 20px;; /* Reducir el tamaño de la fuente */
+  }
+
+  h1, h2, h3 {
+    font-size: 16px; /* Reducir el tamaño de la fuente */
+  }
+
+  header nav ul li {
+    margin-right: 10px; /* Reducir el margen derecho */
+  }
+
+  section p {
+    height: auto; /* Ajustar la altura automáticamente */
+  }
+
+  .full-page-table td {
+    padding: 10px; /* Reducir el relleno */
+  }
+}
+
+@media only screen and (max-width: 480px){
+  header {
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  margin-top: 120px;
+  font-size: 10px;
+  font-style: italic;
+  background-color: rgb(47, 138, 108);
+  color: white;
+  }
+}
+
+h1, h2, h3, div {
+  text-align: center;
+  color: white;
+}
+
+h2, h3 {
+  background-color: #000;
+  width: 100%;
+}
+
+div {
+  text-align: center;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+}
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  background-color: #000;
+  padding: 6px;
+}
+header nav ul li a:hover {
+  color: white;
+}
+
+section {
+  background-color: rgb(47, 138, 108);
+  background-image: url(fondo\ verde.avif);
+  background-size: cover;
+  width: 100%;
+}
+section p {
+  background-color: rgb(47, 138, 108);
+  color: white;
+  text-align: center;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+}
+
+.color {
+  color: white;
+}
+
+section .infop {
+  text-align: center;
+}
+
+.subrayado {
+  text-decoration: underline;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  background-color: rgb(47, 138, 108);
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+td.enmarcado {
+  border: 2px solid red;
+}
+
+
+.turno-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, auto);
+  gap: 5px;
+}
+
+.casilla {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+
+.dia {
+  background-color: #ccc;
+}
+
+.turno {
+  background-color: white;
+}
+
+.full-page-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.full-page-table td {
+  width: 33.33%; 
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+.container {
   max-width: 100%;
   margin: auto;
 }
 
+
+
+  
 /*# sourceMappingURL=estilos.css.map */
